@@ -1,0 +1,73 @@
+/* Limpieza de márgenes por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo gris claro para destacar el artículo */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Contenedor principal centrado imitando la estructura de un diario */
+.contenedor-noticia {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Fondo blanco para la noticia */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos del encabezado */
+.volanta {
+    color: #d32f2f; /* Rojo llamativo para la sección */
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 10px 0;
+    color: #111111;
+}
+
+.copete {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.metadatos {
+    font-size: 13px;
+    color: #777777;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la imagen */
+.imagen-destacada img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.epigrafe {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Estilos del texto */
+.cuerpo-texto p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify; /* Justificado típico de prensa escrita */
+}
