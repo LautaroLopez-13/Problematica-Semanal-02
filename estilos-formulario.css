@@ -1,0 +1,114 @@
+/* ==========================================================
+   DISEÑO MOBILE FIRST (Celulares y pantallas chicas)
+   ========================================================== */
+.contenedor-formulario {
+    max-width: 90%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#titulo-saludo {
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #111;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 10px;
+}
+
+.grupo-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.control-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.control-formulario label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.control-formulario input {
+    padding: 10px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Cambia de color cuando el usuario hace foco */
+.control-formulario input:focus {
+    border-color: #0066cc;
+}
+
+/* Estilo para cuando hay un error en el campo */
+.control-formulario.error-input input {
+    border-color: #d9534f;
+    background-color: #fdf7f7;
+}
+
+.error-mensaje {
+    color: #d9534f;
+    font-size: 0.78rem;
+    margin-top: 4px;
+    min-height: 15px; /* Evita saltos de diseño cuando aparece */
+    display: block;
+}
+
+.contenedor-boton {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-enviar {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    width: 100%; /* Botón ancho completo en celular */
+}
+
+#btn-enviar:hover {
+    background-color: #0066cc;
+}
+
+/* ==========================================================
+   DISEÑO DESKTOP / PC (Pantallas superiores a 768px)
+   ========================================================== */
+@media (min-width: 768px) {
+    .contenedor-formulario {
+        max-width: 750px;
+        padding: 40px;
+    }
+
+    /* Convertimos los campos en dos columnas usando Grid */
+    .grupo-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 20px;
+    }
+
+    #btn-enviar {
+        width: auto; /* El botón recupera su ancho natural */
+        min-width: 200px;
+    }
+}
