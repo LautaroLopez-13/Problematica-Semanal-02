@@ -90,21 +90,21 @@ h1 {
 
 @media (min-width: 1000px) {
     .contenedor-noticia {
-        max-width: 750px; /* Tus 750px originales */
+        max-width: 750px; 
         margin: 30px auto;
         padding: 30px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     h1 {
-        font-size: 34px; /* Tus 34px originales */
+        font-size: 34px; 
     }
 
     .copete {
-        font-size: 18px; /* Tus 18px originales */
+        font-size: 18px; 
     }
 
     .cuerpo-texto p {
-        font-size: 16px; /* Tus 16px originales */
+        font-size: 16px; 
     }
 }

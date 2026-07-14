@@ -1,6 +1,4 @@
-/* ==========================================================
-   DISEÑO MOBILE FIRST (Celulares y pantallas chicas)
-   ========================================================== */
+
 .contenedor-formulario {
     max-width: 90%;
     margin: 30px auto;
@@ -48,12 +46,12 @@
     transition: border-color 0.3s;
 }
 
-/* Cambia de color cuando el usuario hace foco */
+
 .control-formulario input:focus {
     border-color: #0066cc;
 }
 
-/* Estilo para cuando hay un error en el campo */
+
 .control-formulario.error-input input {
     border-color: #d9534f;
     background-color: #fdf7f7;
@@ -63,7 +61,7 @@
     color: #d9534f;
     font-size: 0.78rem;
     margin-top: 4px;
-    min-height: 15px; /* Evita saltos de diseño cuando aparece */
+    min-height: 15px; 
     display: block;
 }
 
@@ -83,23 +81,21 @@
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.2s;
-    width: 100%; /* Botón ancho completo en celular */
+    width: 100%; 
 }
 
 #btn-enviar:hover {
     background-color: #0066cc;
 }
 
-/* ==========================================================
-   DISEÑO DESKTOP / PC (Pantallas superiores a 768px)
-   ========================================================== */
+
 @media (min-width: 768px) {
     .contenedor-formulario {
         max-width: 750px;
         padding: 40px;
     }
 
-    /* Convertimos los campos en dos columnas usando Grid */
+
     .grupo-campos {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -108,7 +104,78 @@
     }
 
     #btn-enviar {
-        width: auto; /* El botón recupera su ancho natural */
+        width: auto; 
         min-width: 200px;
     }
+
+    /* ==========================================================
+   ESTILOS PARA EL MODAL (Petición HTTP)
+   ========================================================== */
+#mi-modal {
+    position: fixed;
+    z-index: 9999; /* Asegura que quede por encima de TODO */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+/* Clases para mostrar/ocultar el modal desde JavaScript */
+.modal-oculto {
+    display: none !important;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    font-family: sans-serif;
+}
+
+#btn-cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-cerrar-modal:hover {
+    color: #000;
+}
+
+#modal-titulo {
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Formato para mostrar el JSON devuelto prolijo */
+.datos-respuesta {
+    background-color: #f4f6f7;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    text-align: left;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.exito-color { color: #28a745; }
+.error-color { color: #dc3545; }
 }
